@@ -1,0 +1,70 @@
+<template format="4"
+          revision="1"
+          name="Akash Web View"
+          description="Created a Standard WebView with Client, common web handing, network handling and much more">
+
+    <!--<category value="Activity"/>-->
+
+<!--
+    <parameter
+            id="activityClass"
+            name="Activity Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            suggest="${layoutToActivity(layoutName)}"
+            default="MainActivity2"
+            help="The name of the activity class to create" />
+-->
+
+
+    <parameter
+        id="appName"
+        name="Name of the App"
+        type="string"
+        class="nonempty"
+        default="Akash Web View"
+        help="Name of the App" />
+
+    <parameter
+        id="homePageUrl"
+        name="Home Page Url"
+        type="string"
+        class="nonempty"
+        default="https://360.shiprocket.in"
+        help="Home Page Url" />
+
+    <parameter
+        id="colorPrimary"
+        name="Primary Color Hexcode"
+        type="string"
+        class="nonempty"
+        default="#008577"
+        help="Primary Color Hexcode of App" />
+
+    <parameter
+        id="colorPrimaryDark"
+        name="Status Bar(Primary Color Dark) Color Hexcode"
+        type="string"
+        class="nonempty"
+        default="#00574B"
+        help="Status Bar Color Hexcode of App" />
+
+    <parameter
+        id="colorAccent"
+        name="Color Accent Hexcode"
+        type="string"
+        class="nonempty"
+        default="#D81B60"
+        help="Color Accent Hexcode of App" />
+
+
+    <globals file="globals.xml.ftl"/>
+    <execute file="recipe.xml.ftl"/>
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_akash_webview.png</thumb>
+    </thumbs>
+
+</template>
